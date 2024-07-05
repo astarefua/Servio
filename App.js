@@ -22,7 +22,7 @@ import AirtimePay from './APP/BoxNavScreens/AirtimePay';
 import PhoneNumber from './APP/BoxNavScreens/PhoneNumber';
 import InternetPay from './APP/BoxNavScreens/InternetPay';
 import InternetAccountNumber from './APP/BoxNavScreens/InternetAccountNumber';
-
+import AIScreen from './APP/Screens/HomeScreen/AIScreen';
 
 
 
@@ -58,6 +58,7 @@ export default function App() {
         <Stack.Screen name="PhoneNumber" component={PhoneNumber}/>
         <Stack.Screen name="InternetPay" component={InternetPay}/>
         <Stack.Screen name="InternetAccountNumber" component={InternetAccountNumber}/>
+        <Stack.Screen name="AIScreen" component={AIScreen}/>
         
         
       </Stack.Navigator>

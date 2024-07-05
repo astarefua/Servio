@@ -61,7 +61,8 @@ const colors = ['#fff', '#fff', '#fff', '#fff', '#fff','#fff'];
 
   return (
     <>
-     <CardsTitle/> 
+     
+     <Text style={styles.title}>Recommended products</Text>
     <View style={styles.container}>
       <FlatList
         data={data}
@@ -86,8 +87,16 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
+
+  title:{
+    fontSize:24,
+    fontWeight:'bold',
+    marginBottom:10,
+    paddingLeft:15,
+    paddingTop:10
+  },
   card: {
-    width: screenWidth * 0.6,
+    width: screenWidth * 0.9,
     height: 200,
     backgroundColor: '#fff',
     borderRadius: 15,

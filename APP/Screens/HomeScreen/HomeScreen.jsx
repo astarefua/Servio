@@ -6,10 +6,14 @@ import SearchBar from './SearchBar'
 import SlidingCards from './SlidingCards'
 import Boxes from './Boxes'
 import Categories from './Categories'
+import ServicesScreen from './ServicesScreen'
+import ReviewsScreen from './ReviewsScreen'
+import FloatingButton from '../../../Components/FloatingButton'
+import Category from './Category'
 
 
 export default function HomeScreen() {
-
+  
 
     
 
@@ -19,7 +23,13 @@ export default function HomeScreen() {
             <SearchBar/>
             <SlidingCards/>
             <Boxes/>
-            <Categories/>
+            
+
+            <Category/>
+            
+            <ServicesScreen/>
+            <ReviewsScreen/>
+            
             
     
         
@@ -34,6 +44,7 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
     safeC: {
         flex:1,
+        
         
     }
 })

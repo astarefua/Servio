@@ -82,10 +82,14 @@ export default function Boxes() {
         </View>
 
 
-        <View style={styles.aiImageContainer}>
+        {/* <View style={styles.aiImageContainer}>
             <Image source={require('./../../../assets/Pics/AI3.jpeg')} style={styles.aiImage}/>
         </View>
-      
+       */}
+
+
+
+
     </View>
   )
 };
@@ -99,8 +103,8 @@ const styles = StyleSheet.create({
       backgroundColor:'#f5f5f5',
       height:330,
       gap:30,
-      paddingTop:15,
-      paddingBottom:15,
+      paddingTop:20,
+      paddingBottom:10,
       paddingLeft:20,
       paddingRight:10
   
@@ -110,7 +114,8 @@ const styles = StyleSheet.create({
       fontSize: 22,
       fontWeight: 'bold',
       textAlign: 'left',
-      paddingLeft:15
+      paddingLeft:16,
+      paddingTop:25,
     },
     rows:{
       display:'flex',
@@ -137,23 +142,23 @@ const styles = StyleSheet.create({
   
     },
 
-    aiImage:{
-        height:130,
-        width:170,
-        backgroundColor:'#fff',
+    // aiImage:{
+    //     height:130,
+    //     width:170,
+    //     backgroundColor:'#fff',
         
-    },
-    aiImageContainer:{
-        display:'flex',
-        justifyContent:'center',
-        alignItems:'center',
-        marginTop:-70,
-        zIndex:1,
-        marginBottom:20,
+    // },
+    // aiImageContainer:{
+    //     display:'flex',
+    //     justifyContent:'center',
+    //     alignItems:'center',
+    //     marginTop:-70,
+    //     zIndex:1,
+    //     marginBottom:20,
         
         
 
-    }
+    // }
 
 
 
