@@ -6,10 +6,12 @@ import SearchBar from './SearchBar'
 import SlidingCards from './SlidingCards'
 import Boxes from './Boxes'
 import Categories from './Categories'
-import ServicesScreen from './ServicesScreen'
+
+import ServicesScreen1 from './ServicesScreen1'
 import ReviewsScreen from './ReviewsScreen'
 import FloatingButton from '../../../Components/FloatingButton'
 import Category from './Category'
+import OrderScreen from '../PlaceOrderScreens/OrderScreen'
 
 
 export default function HomeScreen() {
@@ -27,8 +29,11 @@ export default function HomeScreen() {
 
             <Category/>
             
-            <ServicesScreen/>
+            {/* <ServicesScreen/> */}
+
+            <ServicesScreen1/>
             <ReviewsScreen/>
+            
             
             
     

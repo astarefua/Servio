@@ -1,13 +1,28 @@
-// CategoryCard.js
+
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { MaterialIcons, Ionicons, FontAwesome , Feather , Octicons} from '@expo/vector-icons'; // Importing multiple icon libraries
+import { useNavigation } from '@react-navigation/native';
 
-const Services = ({ iconLib, iconName, label }) => {
+
+
+const Services = ({ iconLib, iconName, label , items}) => {
+
+  const navigation = useNavigation();
   const [isClicked, setIsClicked] = useState(false);
 
-  const handlePress = () => {
+  const handlePress1 = () => {
     setIsClicked(!isClicked);
+  };
+
+  const handlePress2 = () => {
+    navigation.navigate('OrderScreen', { items, name: label });
+
+  };
+
+  const handleCombinedPress = () => {
+    handlePress1();
+    handlePress2();
   };
 
   const renderIcon = () => {
@@ -33,7 +48,7 @@ const Services = ({ iconLib, iconName, label }) => {
   };
 
   return (
-    <TouchableOpacity onPress={handlePress} style={[styles.card, isClicked && styles.cardClicked]}>
+    <TouchableOpacity onPress={handleCombinedPress} style={[styles.card, isClicked && styles.cardClicked]}>
       <View style={styles.iconContainer}>
         {renderIcon()}
       </View>

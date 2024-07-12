@@ -24,6 +24,19 @@ import InternetPay from './APP/BoxNavScreens/InternetPay';
 import InternetAccountNumber from './APP/BoxNavScreens/InternetAccountNumber';
 import AIScreen from './APP/Screens/HomeScreen/AIScreen';
 
+import DeliveryScreen from './APP/Screens/PlaceOrderScreens/DeliveryScreen';
+import ImageOrderScreen from './APP/Screens/PlaceOrderScreens/ImageOrderScreen';
+import ViewCartScreen from './APP/Screens/PlaceOrderScreens/ViewCartScreen';
+import OrderScreen from './APP/Screens/PlaceOrderScreens/OrderScreen';
+
+//import Order from './APP/Screens/PlaceOrderScreens/Order';
+
+
+// import MealDetailScreen from './APP/Screens/PlaceOrderScreens/MealDetailScreen';
+// import MealListScreen from './APP/Screens/PlaceOrderScreens/MealListScreen';
+ 
+
+
 
 
 const Stack = createNativeStackNavigator()
@@ -59,6 +72,15 @@ export default function App() {
         <Stack.Screen name="InternetPay" component={InternetPay}/>
         <Stack.Screen name="InternetAccountNumber" component={InternetAccountNumber}/>
         <Stack.Screen name="AIScreen" component={AIScreen}/>
+        <Stack.Screen name="OrderScreen" component={OrderScreen}/> 
+        {/* <Stack.Screen name="Order" component={Order}/> */}
+        <Stack.Screen name="ViewCartScreen" component={ViewCartScreen}/> 
+        {/* <Stack.Screen name="View" component={View}/> */}
+        <Stack.Screen name="DeliveryScreen" component={DeliveryScreen}/>
+        <Stack.Screen name="ImageOrderScreen" component={ImageOrderScreen}/>
+
+        
+
         
         
       </Stack.Navigator>

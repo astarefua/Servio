@@ -82,11 +82,7 @@ export default function Boxes() {
         </View>
 
 
-        {/* <View style={styles.aiImageContainer}>
-            <Image source={require('./../../../assets/Pics/AI3.jpeg')} style={styles.aiImage}/>
-        </View>
-       */}
-
+       
 
 
 
