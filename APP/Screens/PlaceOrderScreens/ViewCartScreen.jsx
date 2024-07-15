@@ -1,15 +1,28 @@
 // ViewCartScreen.js
 
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
+
 import { View, Text, TouchableOpacity, FlatList, StyleSheet } from 'react-native';
 
 const ViewCartScreen = ({ route, navigation }) => {
 
 const { cart } = route.params;
 
+useLayoutEffect(() => {
+  navigation.setOptions({
+    headerTitle: 'View Cart',
+    headerTitleAlign: 'center',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+    },
+  });
+}, [navigation]);
+
+
   const getTotalCount = () => {
     return Object.values(cart).reduce((total, item) => total + item.count, 0);
   };
+  
 
   const getTotalPrice = () => {
     return Object.values(cart).reduce((total, item) => total + item.count * item.price, 0);
@@ -43,19 +56,30 @@ const { cart } = route.params;
 
 
         
-                <TouchableOpacity
-          style={styles.placeOrderButton}
-          onPress={() => {
-             // Navigate back after placing order
+        <TouchableOpacity
+  style={styles.placeOrderButton}
+  onPress={() => {
+    const totalItems = getTotalCount();
+    const totalPrice = getTotalPrice();
 
-             
-             navigation.navigate('DeliveryScreen') // Navigate back after placing order
- 
-            
-        }}
-        >
-          <Text style={styles.placeOrderButtonText}>Place Order</Text>
-        </TouchableOpacity>
+    if (totalItems <= 0 || totalPrice <= 0) {
+      // Show alert message
+      alert('Please add items to your cart before placing an order.');
+    } else {
+      // Navigate to DeliveryScreen
+      navigation.navigate('DeliveryScreen');
+    }
+  }}
+>
+  <Text style={styles.placeOrderButtonText}>Place Order</Text>
+</TouchableOpacity>
+
+
+
+
+
+
+
       </View>
     </View>
   );
@@ -77,14 +101,17 @@ const styles = StyleSheet.create({
     
     
     
-    borderRadius:15,
+    borderRadius:5,
 
     backgroundColor: 'white',
     shadowColor: '#000',
     shadowOpacity: 0.2,
     shadowRadius: 5,
     
-    elevation: 5,
+    elevation: 3,
+    borderWidth: 0.3,
+    borderColor: '#DAEFFD',
+    
 
   },
   itemText: {
@@ -114,9 +141,9 @@ const styles = StyleSheet.create({
   placeOrderButton: {
     backgroundColor: 'green',
     width:'100%',
-    height:70,
+    height:65,
     padding: 20,
-    borderRadius: 35,
+    borderRadius: 5,
     marginTop: 20,
     alignItems:'center'
   },

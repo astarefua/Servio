@@ -19,15 +19,15 @@ const FloatingButton = () => {
 const styles = StyleSheet.create({
   button: {
     position: 'absolute',
-    width: 60,
-    height: 60,
+    width: 50,
+    height: 50,
     borderRadius: 30,
     backgroundColor: 'green',
     justifyContent: 'center',
     alignItems: 'center',
     
     bottom:1,
-    right: 30,
+    right: 20,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.8,

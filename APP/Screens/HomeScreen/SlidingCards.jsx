@@ -62,7 +62,7 @@ const colors = ['#fff', '#fff', '#fff', '#fff', '#fff','#fff'];
   return (
     <>
      
-     <Text style={styles.title}>Recommended products</Text>
+     <Text style={styles.title}>Promos</Text>
     <View style={styles.container}>
       <FlatList
         data={data}
@@ -97,9 +97,12 @@ const styles = StyleSheet.create({
   },
   card: {
     width: screenWidth * 0.9,
-    height: 200,
+    height: 210,
     backgroundColor: '#fff',
-    borderRadius: 15,
+    borderRadius: 10,
+    borderWidth:0.3,
+    borderColor:'#DAEFFD',
+ 
     margin: 10,
     paddingTop:15,
     display:'flex',
@@ -110,12 +113,16 @@ const styles = StyleSheet.create({
 
     
      // Arrange elements horizontally
-    shadowColor: '#000',
+    shadowColor: '#fff',
     shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 5,
-    overflow:'hidden'
+    shadowOpacity: 0.2,
+    shadowRadius: 3,
+    elevation: 2,
+    
+    shadowColor: 'gray',
+    borderColor:'white',
+    borderWidth:5
+    
   },
   cardTextContainer: {
     flex: 1, // Take up available space

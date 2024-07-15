@@ -25,15 +25,16 @@ import InternetAccountNumber from './APP/BoxNavScreens/InternetAccountNumber';
 import AIScreen from './APP/Screens/HomeScreen/AIScreen';
 
 import DeliveryScreen from './APP/Screens/PlaceOrderScreens/DeliveryScreen';
-import ImageOrderScreen from './APP/Screens/PlaceOrderScreens/ImageOrderScreen';
+
 import ViewCartScreen from './APP/Screens/PlaceOrderScreens/ViewCartScreen';
-import OrderScreen from './APP/Screens/PlaceOrderScreens/OrderScreen';
-
-//import Order from './APP/Screens/PlaceOrderScreens/Order';
+import DeliveryDetailsScreen from './APP/Screens/PlaceOrderScreens/DeliveryDetailsScreen';
 
 
-// import MealDetailScreen from './APP/Screens/PlaceOrderScreens/MealDetailScreen';
-// import MealListScreen from './APP/Screens/PlaceOrderScreens/MealListScreen';
+
+import CartViewCartScreen from './APP/Screens/PlaceOrderScreens/CartViewCartScreen';
+import ServiceOrderScreen from './APP/Screens/PlaceOrderScreens/ServiceOrderScreen';
+import CategoryOrderScreen from './APP/Screens/PlaceOrderScreens/CategoryOrderScreen';
+import SearchBar from './APP/Screens/HomeScreen/SearchBar';
  
 
 
@@ -49,10 +50,21 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
 
-        <Stack.Screen name="Home" component={HomeScreen}                      options={{ header: () => <CustomHeader/> }}
+        {/* <Stack.Screen name="Home" component={HomeScreen}        options={{ header: () => <CustomHeader/> }                options={{ header: () => ''}}
 
 
-        />
+        /> */}
+
+
+<Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
+
+         {/* <Stack.Screen name="Home" component={HomeScreen} />                     */}
+
+
+
+
+
+
         <Stack.Screen name="Cards" component={CardsTitle}/>
         <Stack.Screen name="SendMoney" component={SendMoney}/>
         <Stack.Screen name="Airtime" component={Airtime}/>
@@ -72,12 +84,17 @@ export default function App() {
         <Stack.Screen name="InternetPay" component={InternetPay}/>
         <Stack.Screen name="InternetAccountNumber" component={InternetAccountNumber}/>
         <Stack.Screen name="AIScreen" component={AIScreen}/>
-        <Stack.Screen name="OrderScreen" component={OrderScreen}/> 
+        <Stack.Screen name="ServiceOrderScreen" component={ServiceOrderScreen}/> 
         {/* <Stack.Screen name="Order" component={Order}/> */}
         <Stack.Screen name="ViewCartScreen" component={ViewCartScreen}/> 
         {/* <Stack.Screen name="View" component={View}/> */}
-        <Stack.Screen name="DeliveryScreen" component={DeliveryScreen}/>
-        <Stack.Screen name="ImageOrderScreen" component={ImageOrderScreen}/>
+        <Stack.Screen name="DeliveryScreen" component={DeliveryScreen}   options={{ headerShown: false }}/>
+        {/* <Stack.Screen name="ImageOrderScreen" component={ImageOrderScreen}/> */}
+        <Stack.Screen name="CategoryOrderScreen" component={CategoryOrderScreen}/>
+        <Stack.Screen name="CartViewCartScreen" component={CartViewCartScreen}/> 
+        <Stack.Screen name="DeliveryDetailsScreen" component={DeliveryDetailsScreen}           options={{ headerShown: false }} 
+ /> 
+
 
         
 
@@ -96,17 +113,7 @@ export default function App() {
 
 
 
-    // <SafeAreaView style={styles.safeContainer}>
-    //   <ScrollView style={styles.container} >
-    //   <HomeScreen/>
-      
-    //   <StatusBar style="auto" /> i will deal with status bar later then check if keeping it wont affect the safeareaview 
-    // </ScrollView>
-
-    // </SafeAreaView>
-    
-
-
+   
 const styles = StyleSheet.create({
   safeContainer: {
     flex:1,

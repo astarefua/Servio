@@ -1,55 +1,65 @@
-import { View, Text , SafeAreaView , ScrollView , StyleSheet} from 'react-native'
+import { View, Text , SafeAreaView , ScrollView , StyleSheet, StatusBar} from 'react-native'
 
 
-import React from 'react'
+import React, { useRef } from 'react';
+
 import SearchBar from './SearchBar'
 import SlidingCards from './SlidingCards'
 import Boxes from './Boxes'
-import Categories from './Categories'
+
 
 import ServicesScreen1 from './ServicesScreen1'
 import ReviewsScreen from './ReviewsScreen'
-import FloatingButton from '../../../Components/FloatingButton'
-import Category from './Category'
-import OrderScreen from '../PlaceOrderScreens/OrderScreen'
+import ScrollToTopButton from './ScrollToTopButton';
+import Category from './Category';
 
 
 export default function HomeScreen() {
+
+  const scrollViewRef = useRef(null);
+
   
 
     
 
   return (
+    
     <SafeAreaView style={styles.safeC}>
-        <ScrollView>
+        <ScrollView ref={scrollViewRef}>
             <SearchBar/>
             <SlidingCards/>
             <Boxes/>
+            <Category/> 
             
 
-            <Category/>
+        
             
             {/* <ServicesScreen/> */}
 
             <ServicesScreen1/>
-            <ReviewsScreen/>
+            {/* <ReviewsScreen/> */}
             
             
             
-    
+           
+
         
       
 
         </ScrollView>
+
+               <ScrollToTopButton onPress={() => scrollViewRef.current.scrollTo({ y: 0, animated: true })} />
+
         
     </SafeAreaView>
   )
 }
 
 const styles = StyleSheet.create({
-    safeC: {
+    safeC: { 
         flex:1,
-        
+        paddingTop: StatusBar.currentHeight,
+
         
     }
 })

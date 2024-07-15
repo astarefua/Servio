@@ -90,14 +90,21 @@ const styles = StyleSheet.create({
         color:'#45b3e0'
     },
     input:{
-        height:60,
+        height:50,
         
-        borderColor: '#d3d3d3',
-        borderRadius:5,
+        borderColor: 'white',
+        borderRadius:3,
         paddingLeft:15,
         marginLeft:20,
         marginRight:20,
         borderWidth: 1,
+        backgroundColor:'white',
+        elevation: 3,
+        shadowColor: '#fff',
+
+      shadowOpacity: 0.25,
+    shadowRadius: 2,
+    
         
         
     },

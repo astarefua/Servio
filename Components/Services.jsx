@@ -16,7 +16,7 @@ const Services = ({ iconLib, iconName, label , items}) => {
   };
 
   const handlePress2 = () => {
-    navigation.navigate('OrderScreen', { items, name: label });
+    navigation.navigate('ServiceOrderScreen', { items, name: label , });
 
   };
 
@@ -63,14 +63,17 @@ const styles = StyleSheet.create({
     margin: 10,
     padding: 20,
     backgroundColor: 'white',
+    borderWidth:0.3,
+    borderColor:'#DAEFFD',
     alignItems: 'center',
     justifyContent: 'center',
-    borderRadius: 10,
+    borderRadius: 5,
     shadowColor: '#000',
     shadowOpacity: 0.2,
-    shadowRadius: 5,
-    elevation: 3,
-    height:200
+    shadowRadius: 3,
+    elevation: 2,
+    height:200,
+    shadowOffset: { width: 0, height: 2 },
   },
   cardClicked: {
     backgroundColor: 'green',

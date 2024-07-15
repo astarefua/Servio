@@ -1,28 +1,28 @@
 import {defineField, defineType} from 'sanity'
 
-export default defineType({
+export default {
   name: 'category',
   title: 'Category',
   type: 'document',
   fields: [
     {
       name: 'name',
+      title: 'Name',
       type: 'string',
-      title: 'Category Name',
-      validation: rule => rule.required()
-    },
-    {
-      name: 'description',
-      type: 'string',
-      title: 'Category description',
-      validation: rule => rule.required()
     },
     {
       name: 'image',
+      title: 'Image',
       type: 'image',
-      title: 'image of the category'
-    }
-    
-     
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: 'items',
+      title: 'Items',
+      type: 'array',
+      of: [{ type: 'reference', to: { type: 'catItem' } }],
+    },
   ],
-})
+};

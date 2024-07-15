@@ -19,5 +19,16 @@ export default {
       type: 'number',
       title: 'Price',
     },
+    {
+      name: 'image',
+      title: 'Image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
   ],
 };
+
+
+

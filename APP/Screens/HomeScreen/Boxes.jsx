@@ -97,12 +97,12 @@ const styles = StyleSheet.create({
 
     container:{
       backgroundColor:'#f5f5f5',
-      height:330,
-      gap:30,
+      height:250,
+      gap:20,
       paddingTop:20,
       paddingBottom:10,
       paddingLeft:20,
-      paddingRight:10
+      paddingRight:20
   
     },
 
@@ -116,21 +116,25 @@ const styles = StyleSheet.create({
     rows:{
       display:'flex',
       flexDirection:'row',
-      gap:30
+      gap:20
     },
   
     box:{
-      width:90,
+      width:93,
       height: 90,
-      borderRadius:15,
+      borderRadius:8,
       backgroundColor:'white',
       display:'flex',
       justifyContent:'center',
       alignItems:'center',
-      elevation: 5,
+      elevation:10,
 
       shadowOpacity: 0.25,
     shadowRadius: 4,
+
+    shadowColor: 'gray',
+    borderColor:'white',
+    borderWidth:5
     
       
       

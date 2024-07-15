@@ -1,4 +1,6 @@
 import { createClient } from '@sanity/client';
+import imageUrlBuilder from '@sanity/image-url';
+
 
 
  const client = createClient({
@@ -8,5 +10,11 @@ import { createClient } from '@sanity/client';
   apiVersion: '2023-01-01', // use a specific date (YYYY-MM-DD) to ensure a consistent API version
 
 });
+
+
+const builder = imageUrlBuilder(client);
+
+export const urlFor = (source) => builder.image(source);
+
 
 export default client

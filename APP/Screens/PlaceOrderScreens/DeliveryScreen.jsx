@@ -1,8 +1,13 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useEffect, useRef } from "react";
 import { View, Text, StyleSheet, Easing, Animated, Image } from "react-native";
+import { useNavigation } from "@react-navigation/native"; // Import navigation hook
+
 
 const DeliveryScreen = () => {
+  const navigation = useNavigation(); // Initialize navigation hook
+
+  
   const translateX = useRef(new Animated.Value(0)).current;
 
   const startAnimation = () => {
@@ -30,9 +35,21 @@ const DeliveryScreen = () => {
     ).start();
   };
 
+  // useEffect(() => {
+  //   startAnimation();
+  // }, []);
+
+
   useEffect(() => {
     startAnimation();
+    const timer = setTimeout(() => {
+      navigation.navigate('DeliveryDetailsScreen'); // Navigate to delivery details screen after 1 minute
+    }, 6000); // 60000 milliseconds = 1 minute
+
+    return () => clearTimeout(timer); // Clean up timer on component unmount
   }, []);
+
+
 
   const deliveryDriverImage = require('./../../../assets/Pics/deliveryboy22.png');
 

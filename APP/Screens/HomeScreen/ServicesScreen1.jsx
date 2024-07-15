@@ -6,6 +6,7 @@ import client from '../../../sanity';
 const ServicesScreen1 = () => {
   const [servicesData, setServicesData] = useState([]);
 
+
   useEffect(() => {
     const fetchServices = async () => {
       const query = `*[_type == "service"]{
@@ -13,7 +14,7 @@ const ServicesScreen1 = () => {
         label,
         iconLib,
         iconName,
-        items[]->{_id, name, price}
+        items[]->{_id, name, price, image}
       }`;
       const data = await client.fetch(query);
       setServicesData(data);
@@ -80,6 +81,7 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 10,
     justifyContent: 'center',
+    backgroundColor:'white'
   },
   row: {
     flexDirection: 'row',
@@ -90,6 +92,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     paddingLeft: 13,
   }
+  
 });
 
 export default ServicesScreen1;

@@ -81,7 +81,7 @@ const sections = [
     // }
 ];  
 
-const Categories = () => {
+const CategoriesTry = () => {
   const scrollX = useRef(new Animated.Value(0)).current;
   const scrollViewRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -247,4 +247,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default Categories;
+export default CategoriesTry;
