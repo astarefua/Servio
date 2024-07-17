@@ -129,6 +129,7 @@ const styles = StyleSheet.create({
   },
   cartSummaryText: {
     fontSize: 18,
+    
   },
 
   cartSummaryTextContainer:{
