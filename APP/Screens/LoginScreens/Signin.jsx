@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
+
+
 import {View ,Text, TextInput, TouchableOpacity, Image,  StyleSheet,}   from 'react-native';
 
 export default function SignUpScreen({navigation}) {
+  const currentYear = new Date().getFullYear();
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
@@ -57,6 +61,19 @@ export default function SignUpScreen({navigation}) {
         <TouchableOpacity onPress ={() => navigation.navigate('Phone')} style={styles.signUpButton}>
           <Text style={styles.signUpButtonText}>Continue</Text>
         </TouchableOpacity>
+      </View>
+
+      <View style={styles.signup}>
+        <Text style={styles.signup1}>Don't have an account?</Text>
+        <TouchableOpacity style={styles.signup_text_container} onPress ={() => navigation.navigate('Signup')}>
+          <Text style={styles.signup_text}>{" "}Sign Up</Text>
+        </TouchableOpacity>
+      </View>
+      <View style={styles.footer}>
+        <Text style={styles.footerText}>
+          {currentYear} <Text style={styles.footerText_servio}>Servio.</Text>{" "}
+          <Text style={styles.footerText_terms}>Terms of Service</Text>
+        </Text>
       </View>
     </View>
   );
@@ -128,6 +145,44 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 18,
     fontWeight: 'bold',
+  },
+
+  signup: {
+    textAlign: "center",
+    flexDirection: "row",
+    justifyContent: "center",
+    
+    marginTop: 80,
+  },
+
+
+  signup1: {
+    color: "#999",
+    fontSize: 17,
+  },
+  signup_text: {
+    color: "#111",
+    fontSize: 17,
+    fontWeight: "700",
+  },
+  footer: {
+    position: "absolute",
+    bottom: 0,
+    left: 0,
+    right: 0,
+    padding: 10,
+    alignItems: "center",
+  },
+  footerText: {
+    fontSize: 20,
+    color: "#999",
+  },
+  footerText_servio: {
+    fontWeight: "800",
+    color: "#000",
+  },
+  footerText_terms: {
+    color: "green",
   },
 });
 

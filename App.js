@@ -44,6 +44,7 @@ import Signin from './APP/Screens/LoginScreens/Signin';
 import Phone from './APP/Screens/LoginScreens/Phone';
 import PhoneVerification from './APP/Screens/LoginScreens/PhoneVerification';
 import Splash from './APP/Screens/LoginScreens/Splash';
+import Signup from './APP/Screens/LoginScreens/Signup';
 
 
 
@@ -95,6 +96,7 @@ export default function App() {
             <Stack.Screen name="Splash" component={Splash} options={{ headerShown: false }} />
             {/* <Stack.Screen name="Terms" component={Terms} /> */}
             <Stack.Screen name="Signin" component={Signin} />
+            <Stack.Screen name="Signup" component={Signup} options={{ headerShown: false }} />
             <Stack.Screen name="Phone" component={Phone} /> 
             <Stack.Screen name="PhoneVerification" component={PhoneVerification} />
             {/* Add other sign-up screens as needed */}
@@ -260,7 +262,9 @@ export default function App() {
 //         <Stack.Screen name="PhoneNumber" component={PhoneNumber}/>
 //         <Stack.Screen name="InternetPay" component={InternetPay}/>
 //         <Stack.Screen name="InternetAccountNumber" component={InternetAccountNumber}/>
-//         <Stack.Screen name="AIScreen" component={AIScreen}/>
+//         <Stack.Screen name="AIScreen" component={AIScreen}                     options={{ presentation: 'modal', headerShown: false }} // Present as modal
+
+//         />
 //         <Stack.Screen name="ServiceOrderScreen" component={ServiceOrderScreen}/> 
 //         {/* <Stack.Screen name="Order" component={Order}/> */}
 //         <Stack.Screen name="ViewCartScreen" component={ViewCartScreen}/> 

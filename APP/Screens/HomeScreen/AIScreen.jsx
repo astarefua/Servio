@@ -1,11 +1,12 @@
-import { View, Text , StyleSheet} from 'react-native'
+import {  Text , StyleSheet} from 'react-native'
 import React from 'react'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
 export default function AIScreen() {
   return (
-    <View>
+    <SafeAreaView>
       <Text style={styles.title}>THIS IS THE AI SCREEN</Text>
-    </View>
+    </SafeAreaView>
   )
 }
 
