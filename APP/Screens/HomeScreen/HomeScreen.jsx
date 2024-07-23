@@ -1,7 +1,8 @@
 import { View, Text , SafeAreaView , ScrollView , StyleSheet, StatusBar} from 'react-native'
 
 
-import React, { useRef } from 'react';
+// import React, { useRef } from 'react';
+import React, { useContext, useEffect, useState , useRef } from "react";
 
 import SearchBar from './SearchBar'
 import SlidingCards from './SlidingCards'
@@ -13,12 +14,30 @@ import ReviewsScreen from './ReviewsScreen'
 import ScrollToTopButton from './ScrollToTopButton';
 import Category from './Category';
 
+import { AuthContext } from '../../Firebase/AuthContextFile';
+import axios from "axios";
+
 
 export default function HomeScreen() {
 
   const scrollViewRef = useRef(null);
 
-  
+  const [fetchedMessage, setFetchedMesssage] = useState("");
+
+  const authCtx = useContext(AuthContext);
+  const token = authCtx.token;
+
+  useEffect(() => {
+    axios
+      .get(
+        "https://servio-78107-default-rtdb.firebaseio.com/message.json?auth= " +
+          token
+      )
+      .then((response) => {
+        setFetchedMesssage(response.data);
+      });
+  }, [token]);
+
 
     
 
