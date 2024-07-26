@@ -321,7 +321,7 @@ const styles = StyleSheet.create({
     activeTabIndicator: {
         marginTop: 5,
         height: 2,
-        backgroundColor: 'green',
+        backgroundColor: "#28a745",
         width: '100%',
     },
     section: {

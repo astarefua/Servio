@@ -258,7 +258,7 @@
 
 
 import { useContext, useState } from "react";
-import { Alert } from "react-native";
+import { Alert, StyleSheet , View} from "react-native";
 import AuthContent from "../../Auth/AuthContent";
 import LoadingOverlay from "../../UI/LoadingOverlay";
 import { AuthContext } from "../../Firebase/AuthContextFile";
@@ -289,7 +289,23 @@ function Signup() {
     );
   }
 
-  return <AuthContent onAuthenticate={signupHandler} />;
+  return (
+    <View style={styles.container}>
+      <AuthContent onAuthenticate={signupHandler} headerText="Sign Up" />
+    </View>
+  );
+
+
+  // return <AuthContent onAuthenticate={signupHandler} headerText="signup" />;
 }
+
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
 
 export default Signup;

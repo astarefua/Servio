@@ -2,7 +2,7 @@ import { View, Text , SafeAreaView , ScrollView , StyleSheet, StatusBar} from 'r
 
 
 // import React, { useRef } from 'react';
-import React, { useContext, useEffect, useState , useRef } from "react";
+import React, {useContext, useEffect, useState , useRef } from "react";
 
 import SearchBar from './SearchBar'
 import SlidingCards from './SlidingCards'

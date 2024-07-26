@@ -1,12 +1,16 @@
 import { View, Text , StyleSheet, TextInput, ScrollView} from 'react-native'
-import React from 'react'
+import React , {useContext} from 'react'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import { Ionicons } from '@expo/vector-icons';
+import { SimpleLineIcons } from '@expo/vector-icons';
+import IconButton from '../../UI/IconButton';
+import { AuthContext } from '../../Firebase/AuthContextFile';
+
 
 
 
 export default function SearchBar() {
-    
+    const authCtx = useContext(AuthContext);
   return (
     <View>
         <View style={styles.header}>
@@ -15,7 +19,9 @@ export default function SearchBar() {
 
             <MaterialIcons name = "person" size={30}  color='green' />       */}
 
-            <Ionicons name="notifications-outline" size={27} color="black" />
+            {/* <Ionicons name="notifications-outline" size={27} color="black" /> */}
+
+            <SimpleLineIcons name="logout" size={24} color="black" onPress={authCtx.logout}/>
 
         </View>
 
@@ -83,7 +89,7 @@ const styles = StyleSheet.create({
     },
     appName:{
         fontSize:30,
-        color:'green'
+        color:"#28a745"
     },
     appName1:{
         fontSize:30,

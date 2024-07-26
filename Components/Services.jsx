@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
   },
   cardClicked: {
-    backgroundColor: 'green',
+    backgroundColor: "#28a745",
   },
   iconContainer: {
     alignItems: 'center',

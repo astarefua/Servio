@@ -92,11 +92,11 @@ const ServiceOrderScreen = ({ navigation }) => {
             </View>
             <View style={styles.buttonContainer}>
               <TouchableOpacity style={styles.button} onPress={() => addItemToCart(item)}>
-                <AntDesign name="pluscircleo" size={24} color="green" />
+                <AntDesign name="pluscircleo" size={24} color="#28a745" />
               </TouchableOpacity>
               <Text style={styles.itemCount}>{cart[item._id] ? cart[item._id].count : 0}</Text>
               <TouchableOpacity style={styles.button} onPress={() => removeItemFromCart(item)}>
-                <AntDesign name="minuscircleo" size={24} color="green" />
+                <AntDesign name="minuscircleo" size={24} color="#28a745" />
               </TouchableOpacity>
             </View>
           </View>
@@ -170,7 +170,7 @@ const styles = StyleSheet.create({
     margin: 10,
     padding: 10,
     borderRadius: 10,
-    backgroundColor: 'green',
+    backgroundColor: "#28a745",
     alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -195,7 +195,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
   },
   cartButton: {
-    backgroundColor: 'green',
+    backgroundColor: "#28a745",
     padding: 3,
     borderRadius: 10,
     marginTop: 3,

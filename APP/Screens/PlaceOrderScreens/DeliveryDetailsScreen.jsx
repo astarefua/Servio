@@ -127,7 +127,7 @@ const DeliveryDetailsScreen = () => {
 
             <TouchableOpacity 
                onPress={() => fetchDeliveryData(destination)}
-               style={{backgroundColor:'green', height:50, paddingLeft:70, paddingTop:10, borderRadius:5}}
+               style={{backgroundColor:"#28a745", height:50, paddingLeft:70, paddingTop:10, borderRadius:5}}
                >
               <Text style={{fontSize:20, fontWeight:'bold', color:'white'}}>
                 Set Delivery Location

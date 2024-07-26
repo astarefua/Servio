@@ -189,7 +189,7 @@
 
 // LoginScreen.js
 import { useContext, useState } from "react";
-import { Alert, View, Button, StyleSheet } from "react-native";
+import { Alert, View, Button, StyleSheet , TouchableOpacity, Text} from "react-native";
 import AuthContent from "../../Auth/AuthContent";
 import LoadingOverlay from "../../UI/LoadingOverlay";
 import { AuthContext } from "../../Firebase/AuthContextFile";
@@ -219,11 +219,16 @@ function Login({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <AuthContent isLogin onAuthenticate={loginHandler} />
-      <Button
-        title="Forgot Password?"
+      
+    <AuthContent isLogin onAuthenticate={loginHandler} headerText="Login"/> 
+
+      {/* <Text style={styles.forgottxt}>Forgot Password</Text> */}
+      {/* <TouchableOpacity
+      style={styles.forgotbtn}
         onPress={() => navigation.navigate("ForgotPassword")}
-      />
+      >
+       
+      </TouchableOpacity> */}
     </View>
   );
 }
@@ -232,8 +237,15 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
-    padding: 16,
+  
+    //backgroundColor: "#f3f3f3",
+
+    
   },
+
+  
+  
+ 
 });
 
 export default Login;

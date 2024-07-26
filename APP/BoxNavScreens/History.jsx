@@ -17,7 +17,7 @@ export default function History() {
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: 'green',
+    backgroundColor: "#28a745",
     padding: 15,
     borderRadius: 5,
     alignItems: 'center',

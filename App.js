@@ -41,20 +41,22 @@ import IconButton from './APP/UI/IconButton';
 import Splash from './APP/Screens/LoginScreens/Splash';
 
 
+
 const Stack = createNativeStackNavigator();
 
 function AuthStack() {
   return (
     <Stack.Navigator
-      screenOptions={{
-        headerStyle: { backgroundColor: Colors.primary500 },
-        headerTintColor: "black",
-        contentStyle: { backgroundColor: Colors.primary100 },
-      }}
+      
     >
-      <Stack.Screen name="Login" component={Login} />
-      <Stack.Screen name="Signup" component={Signup} />
-      <Stack.Screen name="ForgotPassword" component={ForgotPasswordScreen} />
+      <Stack.Screen name="Splash" component={Splash}        options={{ headerShown: false }}
+      />
+      <Stack.Screen name="Login" component={Login}         options={{ headerShown: false }} 
+      />
+      <Stack.Screen name="Signup" component={Signup}         options={{ headerShown: false }} 
+      />
+      <Stack.Screen name="ForgotPassword" component={ForgotPasswordScreen}         options={{ headerShown: false }} 
+      />
     </Stack.Navigator>
   );
 }
@@ -63,26 +65,20 @@ function AuthenticatedStack() {
   const authCtx = useContext(AuthContext);
   return (
     <Stack.Navigator
-      screenOptions={{
-        headerStyle: { backgroundColor: Colors.primary500 },
-        headerTintColor: "black",
-        headerTitleAlign: "center",
-        contentStyle: { backgroundColor: Colors.primary100 },
-      }}
+      // screenOptions={{
+      //   headerStyle: { backgroundColor: Colors.primary500 },
+      //   headerTintColor: "black",
+      //   headerTitleAlign: "center",
+      //   contentStyle: { backgroundColor: Colors.primary100 },
+      // }}
     >
       <Stack.Screen
         name="Welcome"
         component={HomeScreen}
-        options={{
-          headerRight: ({ tintColor }) => (
-            <IconButton
-              icon="exit"
-              color={tintColor}
-              size={24}
-              onPress={authCtx.logout}
-            />
-          ),
-        }}
+        options={{ headerShown: false }}
+
+         
+        
       />
       <Stack.Screen name="Cards" component={CardsTitle}/>
         <Stack.Screen name="SendMoney" component={SendMoney}/>

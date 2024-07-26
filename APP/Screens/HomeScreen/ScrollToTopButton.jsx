@@ -5,7 +5,7 @@ import { AntDesign } from '@expo/vector-icons';
 const ScrollToTopButton = ({ onPress }) => {
   return (
     <TouchableOpacity style={styles.button} onPress={onPress}>
-      <AntDesign name="upcircleo" size={36} color="green" />
+      <AntDesign name="upcircleo" size={36} color="#28a745" />
     </TouchableOpacity>
   );
 };

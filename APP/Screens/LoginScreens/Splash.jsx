@@ -16,7 +16,7 @@ export default function Splash() {
 
     // Navigate to the terms page after 4 seconds
     const timeout = setTimeout(() => {
-      navigation.navigate('Signin');
+      navigation.navigate('Login');
     }, 4000);
 
     // Clear the timeout if the component unmounts

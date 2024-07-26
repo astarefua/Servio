@@ -1,6 +1,6 @@
 // ForgotPasswordScreen.js
 import React, { useState } from "react";
-import { View, Text, TextInput, Button, Alert, StyleSheet } from "react-native";
+import { View, Text, TextInput, Button, Alert, StyleSheet , TouchableOpacity} from "react-native";
 
 
 import { sendPasswordResetEmail } from "../../Firebase/Auth";
@@ -24,7 +24,7 @@ function ForgotPasswordScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <Text style={styles.label}>
-        Enter your email address to reset your password:
+        Enter your email address:
       </Text>
       <TextInput
         style={styles.input}
@@ -33,7 +33,16 @@ function ForgotPasswordScreen({ navigation }) {
         keyboardType="email-address"
         autoCapitalize="none"
       />
-      <Button title="Reset Password" onPress={resetPasswordHandler} />
+
+
+      <TouchableOpacity
+      style={styles.resetbtn}
+      onPress={resetPasswordHandler}
+      >
+        <Text  style={styles.resettxt}>Reset Password</Text>
+       
+      </TouchableOpacity> 
+      
     </View>
   );
 }
@@ -48,15 +57,40 @@ const styles = StyleSheet.create({
   label: {
     fontSize: 16,
     marginBottom: 8,
+    width:"95%",
+    marginLeft:10,
+
   },
   input: {
     height: 40,
     borderColor: "gray",
-    borderWidth: 1,
+    borderWidth: 0.6,
     marginBottom: 12,
     padding: 8,
     borderRadius: 4,
+    width:"95%",
+    marginLeft:10,
   },
+  resetbtn:{
+    backgroundColor: "#28a745",
+        borderRadius: 10,
+        height: 45,
+        width:"95%",
+        
+         marginTop: 40,
+         fontSize: 20,
+         marginLeft:10,
+        alignItems: "center",
+        justifyContent: "center",
+  },
+
+  resettxt:{
+    color: "#fff",
+            fontSize: 20,
+            fontWeight: "300",
+  }
+
+
 });
 
 export default ForgotPasswordScreen;
