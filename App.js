@@ -81,12 +81,64 @@ function AuthenticatedStack() {
         
       />
       <Stack.Screen name="Cards" component={CardsTitle}/>
-        <Stack.Screen name="SendMoney" component={SendMoney}/>
-        <Stack.Screen name="Airtime" component={Airtime}/>
-        <Stack.Screen name="Internet" component={Internet}/>
-        <Stack.Screen name="Bills" component={Bills}/>
-        <Stack.Screen name="Sms" component={Sms}/>
-        <Stack.Screen name="Curency" component={Curency}/>
+        <Stack.Screen name="SendMoney" component={SendMoney}
+                  options={{
+                    headerTitle: "Send", // File name to be shown in the header
+                    headerTitleStyle: {
+                      fontWeight: 'bold',
+                      textAlign: 'center', // This ensures the text is centered
+                      flex: 1,
+                    },
+                    headerTitleAlign: 'center', // Aligns the header title to the center
+                  }}
+        />
+        <Stack.Screen name="Airtime" component={Airtime}
+                  options={{
+                    headerTitle: "Pay", // File name to be shown in the header
+                    headerTitleStyle: {
+                      fontWeight: 'bold',
+                      textAlign: 'center', // This ensures the text is centered
+                      flex: 1,
+                    },
+                    headerTitleAlign: 'center', // Aligns the header title to the center
+                  }}
+        />
+        <Stack.Screen name="Internet" component={Internet}
+                  options={{
+                    headerTitle: "Pay", // File name to be shown in the header
+                    headerTitleStyle: {
+                      fontWeight: 'bold',
+                      textAlign: 'center', // This ensures the text is centered
+                      flex: 1,
+                    },
+                    headerTitleAlign: 'center', // Aligns the header title to the center
+                  }}
+        />
+        <Stack.Screen name="Bills" component={Bills}
+                  options={{
+                    headerTitle: "Pay", // File name to be shown in the header
+                    headerTitleStyle: {
+                      fontWeight: 'bold',
+                      textAlign: 'center', // This ensures the text is centered
+                      flex: 1,
+                    },
+                    headerTitleAlign: 'center', // Aligns the header title to the center
+                  }}
+        />
+        <Stack.Screen name="Sms" component={Sms}
+                  
+        />
+        <Stack.Screen name="Curency" component={Curency}
+                  options={{
+                    headerTitle: "CurrencyConverter", // File name to be shown in the header
+                    headerTitleStyle: {
+                      fontWeight: 'bold',
+                      textAlign: 'center', // This ensures the text is centered
+                      flex: 1,
+                    },
+                    headerTitleAlign: 'center', // Aligns the header title to the center
+                  }}
+        />
         <Stack.Screen name="BillsPay" component={BillsPay}/>
         <Stack.Screen name="AccountNumber" component={AccountNumber}/>
         <Stack.Screen name="EcgScreen" component={EcgScreen}/>

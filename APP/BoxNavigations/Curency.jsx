@@ -190,6 +190,9 @@ const CurrencyConverter = () => {
   const [currencyOptions, setCurrencyOptions] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  
+  
+
   useEffect(() => {
     fetchConversionRate();
   }, [baseCurrency, targetCurrency]);
