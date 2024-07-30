@@ -1,9 +1,9 @@
-import { View, Text , StyleSheet, TextInput, ScrollView} from 'react-native'
+import { View, Text , StyleSheet, TextInput,} from 'react-native'
 import React , {useContext} from 'react'
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
+
 import { Ionicons } from '@expo/vector-icons';
 import { SimpleLineIcons } from '@expo/vector-icons';
-import IconButton from '../../UI/IconButton';
+
 import { AuthContext } from '../../Firebase/AuthContextFile';
 
 
@@ -15,12 +15,7 @@ export default function SearchBar() {
     <View>
         <View style={styles.header}>
         <View style={styles.heading}>
-            {/* <MaterialIcons name = "home"  size={30} color='green'/>
-
-            <MaterialIcons name = "person" size={30}  color='green' />       */}
-
-            {/* <Ionicons name="notifications-outline" size={27} color="black" /> */}
-
+            
             <SimpleLineIcons name="logout" size={24} color="black" onPress={authCtx.logout}/>
 
         </View>
@@ -56,9 +51,6 @@ export default function SearchBar() {
 
 const styles = StyleSheet.create({
     header:{
-        // backgroundColor:'gray',
-        // paddingBottom:60,
-        // borderBottomLeftRadius:80,
         
         display:'flex',
         flexDirection:'row',
@@ -70,10 +62,7 @@ const styles = StyleSheet.create({
         
     },
     heading:{
-        // display:'flex',
-        // flexDirection:'row',
-        // justifyContent:'space-between'
-
+        
 
     },
 
@@ -81,8 +70,6 @@ const styles = StyleSheet.create({
 
     appNameContainer:{
     display:'flex',
-    // justifyContent:'center',
-    // alignItems:'center',
     flexDirection:'row',
     marginTop:-5
     

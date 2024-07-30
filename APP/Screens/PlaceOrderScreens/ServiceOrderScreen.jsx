@@ -9,7 +9,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, TouchableOpacity, FlatList, StyleSheet, Image } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 import { useRoute } from '@react-navigation/native';
-import { urlFor } from '../../../sanity'; // Ensure you have a function to get the image URL
+import { urlFor } from '../../../sanity'; 
 
 
 
@@ -207,7 +207,7 @@ const styles = StyleSheet.create({
   },
   flatListContent: {
     flexGrow: 1,
-    paddingBottom: 80, // Add space for the fixed footer
+    paddingBottom: 80, 
   },
 });
 

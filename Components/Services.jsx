@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
-import { MaterialIcons, Ionicons, FontAwesome , Feather , Octicons} from '@expo/vector-icons'; // Importing multiple icon libraries
+import { MaterialIcons, Ionicons, FontAwesome , Feather , Octicons,MaterialCommunityIcons} from '@expo/vector-icons'; 
 import { useNavigation } from '@react-navigation/native';
 
 
@@ -41,6 +41,9 @@ const Services = ({ iconLib, iconName, label , items}) => {
         return <MaterialIcons {...iconProps} />;
         case 'Octicons':
         return <Octicons {...iconProps} />;
+        case 'MaterialCommunityIcons':
+          return <MaterialCommunityIcons {...iconProps} />;
+        
       
       default:
         return <FontAwesome {...iconProps} />;

@@ -35,18 +35,15 @@ const DeliveryScreen = () => {
     ).start();
   };
 
-  // useEffect(() => {
-  //   startAnimation();
-  // }, []);
-
+  
 
   useEffect(() => {
     startAnimation();
     const timer = setTimeout(() => {
-      navigation.navigate('DeliveryDetailsScreen'); // Navigate to delivery details screen after 1 minute
-    }, 6000); // 60000 milliseconds = 1 minute
+      navigation.navigate('DeliveryDetailsScreen');
+    }, 6000); 
 
-    return () => clearTimeout(timer); // Clean up timer on component unmount
+    return () => clearTimeout(timer); 
   }, []);
 
 
@@ -55,7 +52,7 @@ const DeliveryScreen = () => {
 
   return (
     <View style={styles.container}>
-      {/* <View style={styles.OuterContainer}> */}
+    
       <View style={styles.imageContainer}>
         <Animated.Image
           source={deliveryDriverImage}

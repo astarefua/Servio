@@ -1,82 +1,3 @@
-// import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-// import Favorites from '../BoxNavScreens/Favorites';
-// import Pay from '../BoxNavScreens/Pay'
-// import History from '../BoxNavScreens/History'
-// import Send from '../BoxNavScreens/Send';
-// import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
-// import {Text, StyleSheet} from 'react-native'
-
-
-// import { AntDesign } from '@expo/vector-icons';
-// import { FontAwesome } from '@expo/vector-icons';
-// import { SimpleLineIcons } from '@expo/vector-icons';
-
-
-
-
-// const Tab = createBottomTabNavigator();
-
-
-
-
-// export default function SendMoney() {
-//   return (
-
-
-
-
-
-
-//     // <Tab.Navigator screenOptions={{
-//     //     tabBarActiveTintColor:'#4CAF50',
-//     //     headerShown:false
-//     // }}>
-//     //     <Tab.Screen name='Favorites' component={Favorites}
-//     //     options={{
-//     //         tabBarLabel:({color})=>(
-//     //             <Text style={{color:color , fontSize:20, marginTop:-7}}>
-//     //                 Favorites
-//     //             </Text>
-//     //         ),
-
-//     //         tabBarIcon:({color,size})=>(
-//     //             <AntDesign name="staro" size={size} color={color} />
-
-//     //         )
-//     //     }}/>
-//     //     <Tab.Screen name='Send' component={Send} 
-//     //     options={{
-//     //         tabBarLabel:({color})=>(
-//     //             <Text style={{color:color , fontSize:20, marginTop:-7}}>
-//     //                 Send
-//     //             </Text>
-//     //         ),
-
-//     //         tabBarIcon:({color,size})=>(
-//     //           <FontAwesome name="money" size={size} color={color} />
-
-//     //         )
-//     //     }}/>
-//     //     <Tab.Screen name='History' component={History} 
-//     //     options={{
-//     //         tabBarLabel:({color})=>(
-//     //             <Text style={{color:color , fontSize:20, marginTop:-7}}>
-//     //                 History
-//     //             </Text>
-//     //         ),
-
-//     //         tabBarIcon:({color,size})=>(
-//     //           <SimpleLineIcons name="notebook" size={size} color={color} />
-
-//     //         )
-//     //     }} />
-
-//     // </Tab.Navigator>
-    
-//   )
-// }
-
-
 
 
 
@@ -95,7 +16,7 @@ const groups = [
       { id: '4', name: 'Telecel Cash', image: require('./../../assets/Pics/telecel.png') },
 
 
-    //   { id: '5', name: 'Telecel Cash', image: require('./../../assets/Pics/startimes.jpeg') },
+    
     ],
   },
   {
@@ -117,9 +38,6 @@ const groups = [
       { id: '12', name: 'Gym Pass', image: require('./../../assets/Pics/gympass.png') },
 
 
-
-    //   { id: '14', name: 'Item 14', image: require('./../../assets/Pics/startimes.jpeg') },
-    //   { id: '15', name: 'Item 15', image: require('./../../assets/Pics/startimes.jpeg') },
     ],
   },
 ];

@@ -1,4 +1,4 @@
-// ViewCartScreen.js
+
 
 import React, { useLayoutEffect } from 'react';
 
@@ -36,7 +36,7 @@ useLayoutEffect(() => {
         renderItem={({ item }) => (
           <View style={styles.itemContainer}>
             <Text style={styles.itemText}>{item.name}</Text>
-            <Text style={styles.itemText}>${item.price}</Text>
+            <Text style={styles.itemText}>GHS{item.price}</Text>
             <Text style={styles.itemText}>Quantity: {item.count}</Text>
           </View>
         )}
@@ -49,7 +49,7 @@ useLayoutEffect(() => {
 
         <View style={styles.cartSummaryTextContainer}>
         <Text style={styles.cartSummaryText}>Total Price: </Text>
-        <Text>${getTotalPrice().toFixed(2)}</Text>
+        <Text>GHS{getTotalPrice().toFixed(2)}</Text>
 
         </View>
         
@@ -63,10 +63,10 @@ useLayoutEffect(() => {
     const totalPrice = getTotalPrice();
 
     if (totalItems <= 0 || totalPrice <= 0) {
-      // Show alert message
+      
       alert('Please add items to your cart before placing an order.');
     } else {
-      // Navigate to DeliveryScreen
+    
       navigation.navigate('DeliveryScreen');
     }
   }}

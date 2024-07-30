@@ -1,6 +1,6 @@
 
 
-// ViewCartScreen.js
+
 
 import React, { useLayoutEffect } from 'react';
 import { View, Text, TouchableOpacity, FlatList, StyleSheet, Alert } from 'react-native';
@@ -33,7 +33,7 @@ const CartViewCartScreen = ({ route, navigation }) => {
     return (
       <View style={styles.itemContainer}>
         <Text style={styles.itemText}>{item.name}</Text>
-        <Text style={styles.itemText}>${item.price}</Text>
+        <Text style={styles.itemText}>GHS{item.price}</Text>
         <Text style={styles.itemText}>Quantity: {item.count}</Text>
       </View>
     );
@@ -54,7 +54,7 @@ const CartViewCartScreen = ({ route, navigation }) => {
     <View style={styles.container}>
       <FlatList
         data={Object.values(cart)}
-        keyExtractor={(item) => item._id.toString()} // Use item._id for unique key
+        keyExtractor={(item) => item._id.toString()} 
         renderItem={renderCartItem}
       />
       <View style={styles.cartSummaryContainer}>
@@ -65,7 +65,7 @@ const CartViewCartScreen = ({ route, navigation }) => {
 
         <View style={styles.cartSummaryTextContainer}>
           <Text style={styles.cartSummaryText}>Total Price: </Text>
-          <Text>${getTotalPrice().toFixed(2)}</Text>
+          <Text>GHS{getTotalPrice().toFixed(2)}</Text>
         </View>
 
         <TouchableOpacity

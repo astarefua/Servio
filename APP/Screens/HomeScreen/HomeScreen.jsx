@@ -1,7 +1,7 @@
-import { View, Text , SafeAreaView , ScrollView , StyleSheet, StatusBar} from 'react-native'
+import {  SafeAreaView , ScrollView , StyleSheet, StatusBar} from 'react-native'
 
 
-// import React, { useRef } from 'react';
+
 import React, {useContext, useEffect, useState , useRef } from "react";
 
 import SearchBar from './SearchBar'
@@ -10,7 +10,7 @@ import Boxes from './Boxes'
 
 
 import ServicesScreen1 from './ServicesScreen1'
-import ReviewsScreen from './ReviewsScreen'
+
 import ScrollToTopButton from './ScrollToTopButton';
 import Category from './Category';
 
@@ -53,10 +53,10 @@ export default function HomeScreen() {
 
         
             
-            {/* <ServicesScreen/> */}
+          
 
             <ServicesScreen1/>
-            {/* <ReviewsScreen/> */}
+            
             
             
             

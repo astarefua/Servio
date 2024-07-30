@@ -20,7 +20,7 @@ import { FontAwesome } from '@expo/vector-icons';
 
 const CategoryOrderScreen = ({ navigation }) => {
     const route = useRoute();
-    // const { items, name, imageUrl , rating} = route.params;
+    
     const { items, name, relatedImageUrl , rating} = route.params;
 
 
@@ -75,8 +75,7 @@ const CategoryOrderScreen = ({ navigation }) => {
             <StatusBar backgroundColor="transparent" translucent />
             <Image source={{ uri: relatedImageUrl }} style={styles.topImage} />
 
-            {/* <Image source={{ uri: imageUrl }} style={styles.topImage} /> */}
-            {/* <Text style={styles.title}>{name}</Text> */}
+            
         </View>
     );
 
@@ -91,7 +90,7 @@ const CategoryOrderScreen = ({ navigation }) => {
                     View Cart
                 </Text>
             </TouchableOpacity>
-            <Text style={styles.cartText2}>${getTotalPrice().toFixed(2)}</Text>
+            <Text style={styles.cartText2}>GHS{getTotalPrice().toFixed(2)}</Text>
         </View>
     );
 
@@ -120,7 +119,7 @@ const CategoryOrderScreen = ({ navigation }) => {
                     <View key={item._id} style={styles.itemContainer}>
                         <View style={styles.itemNameAndPrice}>
                             <Text style={styles.itemText}>{item.name}</Text>
-                            <Text style={styles.itemPrice}>${item.price}</Text>
+                            <Text style={styles.itemPrice}>GHS{item.price}</Text>
                             <View style={styles.starContainer}>
                                 {renderStars(item.rating)}
                             </View>
@@ -146,7 +145,7 @@ const CategoryOrderScreen = ({ navigation }) => {
                         </View>
                     </View>
                 )}
-                contentContainerStyle={{ paddingBottom: 100 }} // Ensure the content does not get cut off
+                contentContainerStyle={{ paddingBottom: 100 }} 
             />
             {renderFooter()}
         </View>
@@ -162,14 +161,14 @@ const styles = StyleSheet.create({
     },
     topImage: {
         width: '100%',
-        height: 300, // Increase the height to cover the status bar and header
+        height: 300, 
         resizeMode: 'cover',
         borderBottomLeftRadius:40,
         borderBottomRightRadius:40
     },
     backButton: {
         
-        // Adjust to place the button within the image
+        
         backgroundColor:'black',
         borderRadius:50,
         height:40,

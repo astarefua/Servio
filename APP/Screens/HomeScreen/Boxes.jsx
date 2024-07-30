@@ -142,25 +142,7 @@ const styles = StyleSheet.create({
   
     },
 
-    // aiImage:{
-    //     height:130,
-    //     width:170,
-    //     backgroundColor:'#fff',
-        
-    // },
-    // aiImageContainer:{
-    //     display:'flex',
-    //     justifyContent:'center',
-    //     alignItems:'center',
-    //     marginTop:-70,
-    //     zIndex:1,
-    //     marginBottom:20,
-        
-        
-
-    // }
-
-
+    
 
   
   })

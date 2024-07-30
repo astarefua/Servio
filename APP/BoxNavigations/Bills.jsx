@@ -1,74 +1,3 @@
-// import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-// import Favorites from '../BoxNavScreens/Favorites';
-// import Pay from '../BoxNavScreens/Pay'
-// import History from '../BoxNavScreens/History'
-// import HomeScreen from '../Screens/HomeScreen/HomeScreen';
-
-// import { Text } from 'react-native';
-
-// import { AntDesign } from '@expo/vector-icons';
-// import { FontAwesome } from '@expo/vector-icons';
-// import { SimpleLineIcons } from '@expo/vector-icons';
-// import BillsPay from '../BoxNavScreens/BillsPay';
-// import BillsFav from '../BoxNavScreens/BillsFav';
-
-
-
-
-
-// const Tab = createBottomTabNavigator();
-
-// export default function Internet() {
-//   return (
-//     <Tab.Navigator screenOptions={{
-//         tabBarActiveTintColor:'#4CAF50',
-//         headerShown:false
-//     }}>
-//         <Tab.Screen name='BillsFav' component={BillsFav}
-//         options={{
-//             tabBarLabel:({color})=>(
-//                 <Text style={{color:color , fontSize:20, marginTop:-7}}>
-//                     Favorites
-//                 </Text>
-//             ),
-
-//             tabBarIcon:({color,size})=>(
-//                 <AntDesign name="staro" size={size} color={color} />
-
-//             )
-//         }}/>
-//         <Tab.Screen name='BillsPay' component={BillsPay} 
-//         options={{
-//             tabBarLabel:({color})=>(
-//                 <Text style={{color:color , fontSize:20, marginTop:-7}}>
-//                     Pay
-//                 </Text>
-//             ),
-
-//             tabBarIcon:({color,size})=>(
-//               <FontAwesome name="money" size={size} color={color} />
-
-//             )
-//         }}/>
-//         <Tab.Screen name='History' component={History} 
-//         options={{
-//             tabBarLabel:({color})=>(
-//                 <Text style={{color:color , fontSize:20, marginTop:-7}}>
-//                     Profile
-//                 </Text>
-//             ),
-
-//             tabBarIcon:({color,size})=>(
-//               <SimpleLineIcons name="notebook" size={size} color={color} />
-
-//             )
-//         }} />
-
-//     </Tab.Navigator>
-    
-//   )
-// }
-
 
 
 import React, { useState } from 'react';
@@ -95,7 +24,7 @@ const Card = ({ name, imageSource, screenName }) => {
 
         <TouchableOpacity            onPress={() => navigation.navigate(screenName , {name})}
         >
-            {/* Your arrow icon or image here */}
+          
             <Text style={styles.arrow}>&gt;</Text>
         </TouchableOpacity>
         </View>
@@ -151,11 +80,9 @@ const Bills = () => {
 const styles = StyleSheet.create({
     container: {
         padding: 16,
-        paddingBottom: 32, // Ensures space below the cards
-      },
+        paddingBottom: 32,       },
       cardContainer: {
-        // marginBottom: 5,
-      },
+              },
       searchBar: {
         height: 50,
         borderColor: '#ccc',
@@ -182,13 +109,9 @@ const styles = StyleSheet.create({
   centerContent: {
     flex: 1,
     padding: 20,
-    // alignItems: 'center',
+    
   },
-  // name: {
-  //   fontSize: 18,
-  //   fontWeight: 'bold',
-  // },
-
+  
 
   name: {
     flex: 1,
@@ -198,7 +121,7 @@ const styles = StyleSheet.create({
   image: {
     width: 60,
     height: 60,
-    borderRadius: 40, // To make it rounded, half of the image size (assuming square image)
+    borderRadius: 40, 
   },
   horizontalLine: {
     height: 1,
