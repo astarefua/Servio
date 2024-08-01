@@ -1,31 +1,35 @@
-
-
-
-
-import React, { useLayoutEffect } from 'react';
-import { View, Text, TouchableOpacity, FlatList, StyleSheet, Alert } from 'react-native';
+import React, { useLayoutEffect } from "react";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  FlatList,
+  StyleSheet,
+  Alert,
+} from "react-native";
 
 const CartViewCartScreen = ({ route, navigation }) => {
   const { cart } = route.params;
 
   useLayoutEffect(() => {
     navigation.setOptions({
-      headerTitle: 'View Cart',
-      headerTitleAlign: 'center',
+      headerTitle: "View Cart",
+      headerTitleAlign: "center",
       headerTitleStyle: {
-        fontWeight: 'bold',
+        fontWeight: "bold",
       },
     });
   }, [navigation]);
-  
-  
 
   const getTotalCount = () => {
     return Object.values(cart).reduce((total, item) => total + item.count, 0);
   };
 
   const getTotalPrice = () => {
-    return Object.values(cart).reduce((total, item) => total + item.count * item.price, 0);
+    return Object.values(cart).reduce(
+      (total, item) => total + item.count * item.price,
+      0
+    );
   };
 
   const renderCartItem = ({ item }) => {
@@ -44,9 +48,12 @@ const CartViewCartScreen = ({ route, navigation }) => {
     const totalPrice = getTotalPrice();
 
     if (totalItems <= 0 || totalPrice <= 0) {
-      Alert.alert('Alert', 'Please add items to your cart before placing an order.');
+      Alert.alert(
+        "Alert",
+        "Please add items to your cart before placing an order."
+      );
     } else {
-      navigation.navigate('DeliveryScreen');
+      navigation.navigate("DeliveryScreen");
     }
   };
 
@@ -54,7 +61,7 @@ const CartViewCartScreen = ({ route, navigation }) => {
     <View style={styles.container}>
       <FlatList
         data={Object.values(cart)}
-        keyExtractor={(item) => item._id.toString()} 
+        keyExtractor={(item) => item._id.toString()}
         renderItem={renderCartItem}
       />
       <View style={styles.cartSummaryContainer}>
@@ -87,17 +94,17 @@ const styles = StyleSheet.create({
     flex: 1,
     margin: 10,
     padding: 17,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
     borderRadius: 5,
-    backgroundColor: 'white',
-    shadowColor: '#000',
+    backgroundColor: "white",
+    shadowColor: "#000",
     shadowOpacity: 0.2,
     shadowRadius: 5,
     elevation: 3,
     borderWidth: 0.3,
-    borderColor: '#DAEFFD',
+    borderColor: "#DAEFFD",
   },
   itemText: {
     fontSize: 18,
@@ -106,34 +113,33 @@ const styles = StyleSheet.create({
     padding: 16,
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
-    backgroundColor: 'white',
+    backgroundColor: "white",
     height: 250,
   },
   cartSummaryText: {
     fontSize: 18,
   },
   cartSummaryTextContainer: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
     marginBottom: 20,
     marginTop: 20,
   },
   placeOrderButton: {
     backgroundColor: "#28a745",
-    width: '100%',
+    width: "100%",
     height: 65,
     padding: 20,
     borderRadius: 10,
     marginTop: 10,
-    alignItems: 'center',
+    alignItems: "center",
   },
   placeOrderButtonText: {
-    color: 'white',
+    color: "white",
     fontSize: 20,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
 });
 
 export default CartViewCartScreen;
-
