@@ -9,17 +9,24 @@ export const AuthContext = createContext({
 });
 
 function AuthContextFile({ children }) {
-  // Destructure children from props
   const [authToken, setAuthToken] = useState();
 
-  function authenticate(token) {
+  async function authenticate(token) {
     setAuthToken(token);
-    AsyncStorage.setItem("token", token);
+    try {
+      await AsyncStorage.setItem("token", token);
+    } catch (error) {
+      console.error("Failed to save token to AsyncStorage:", error);
+    }
   }
 
-  function logout() {
+  async function logout() {
     setAuthToken(null);
-    AsyncStorage.removeItem("token");
+    try {
+      await AsyncStorage.removeItem("token");
+    } catch (error) {
+      console.error("Failed to remove token from AsyncStorage:", error);
+    }
   }
 
   const value = {

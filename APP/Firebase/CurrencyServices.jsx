@@ -158,7 +158,7 @@ const currencyFlags = {
   WST: "🇼🇸",
   XAF: "🇨🇲",
   XCD: "🇦🇬",
-  XDR: "🌐",
+
   XOF: "🇨🇮",
   XPF: "🇵🇫",
   YER: "🇾🇪",
