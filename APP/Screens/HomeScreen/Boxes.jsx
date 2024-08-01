@@ -1,4 +1,4 @@
-import { View, Text , StyleSheet, Image , Pressable} from 'react-native'
+import { View, Text , StyleSheet, Image , Pressable, Dimensions } from 'react-native'
 import React from 'react'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import { useNavigation } from '@react-navigation/native';
@@ -7,7 +7,15 @@ import { Foundation } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
+const responsiveHeight = (percentage) => {
+  const screenHeight = Dimensions.get("window").height
+  return (percentage * screenWidth) / 100
+}
 
+const responsiveWidth = (percentage) => {
+  const screenWidth = Dimensions.get("window").width
+  return (percentage * screenWidth) / 100
+}
 
 export default function Boxes() {
   const navigation = useNavigation();
@@ -101,7 +109,7 @@ const styles = StyleSheet.create({
       gap:20,
       paddingTop:20,
       paddingBottom:10,
-      paddingLeft:20,
+      paddingLeft:15,
       paddingRight:20
   
     },
@@ -120,7 +128,7 @@ const styles = StyleSheet.create({
     },
   
     box:{
-      width:93,
+      width: responsiveWidth(27),
       height: 90,
       borderRadius:8,
       backgroundColor:'white',

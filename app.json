@@ -4,7 +4,7 @@
     "slug": "Star_Hubtel",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/servio.jpg",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
@@ -16,7 +16,6 @@
       "infoPlist": {
         "NSLocationWhenInUseUsageDescription": "This app needs access to your location to show delivery details."
       }
-
     },
     "android": {
       "adaptiveIcon": {
@@ -26,12 +25,20 @@
       "permissions": [
         "ACCESS_FINE_LOCATION",
         "ACCESS_COARSE_LOCATION"
-      ]
-
+      ],
+      "package": "com.iamastar.Star_Hubtel"
     },
-    
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "b15d5492-0af3-445a-9f8c-ece9e77cd2c4"
+      }
+    },
+    "owner": "iamastar",
+    "plugins": [
+      "expo-router"
+    ]
   }
 }
