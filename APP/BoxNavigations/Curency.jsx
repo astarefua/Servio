@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import {
   View,
@@ -19,9 +18,6 @@ const CurrencyConverter = () => {
   const [convertedAmount, setConvertedAmount] = useState(null);
   const [currencyOptions, setCurrencyOptions] = useState([]);
   const [loading, setLoading] = useState(true);
-
-  
-  
 
   useEffect(() => {
     fetchConversionRate();
@@ -48,7 +44,7 @@ const CurrencyConverter = () => {
     try {
       const data = await getLatestRates("USD");
       const options = Object.keys(data.conversion_rates).map((key) => ({
-        label: `${data.flags[key]} ${key}`,
+        label: key,
         value: key,
       }));
       setCurrencyOptions(options);
